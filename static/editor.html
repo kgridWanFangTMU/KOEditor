@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>KGrid Object Editor</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/kgrid.css" rel="stylesheet">
+      
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css" media="screen">
+    .editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+  </head>
+  <body>
+    <div class="affix" id = "sys_status" style="display:none;"> 系統 : <span class="content"></span></div>
+
+
+     <div class="container-fluid">
+      <!-- Example row of columns -->
+        <div id="header" class="page-header">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>KGrid Editor <sup><small>ver 0.3 alpha</small></sup>
+                    
+                    </h3>
+                </div>
+                <div class="col-md-4 text-right page_nav">
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                        <button id="btn_server" class="btn btn-default" type="button"><i class="fa fa-database" aria-hidden="true"></i></button>
+                      </span>
+                      <select id="ko_sel" class="form-control "></select>
+                    </div><!-- /input-group -->
+ 
+                </div>
+                <div class="col-md-2 text-right page_nav">
+                    <input id="inp_url" placeholder="url" type="text" class="form-control">
+ 
+                </div>
+                <div  class="page_nav col-md-3">
+                <a id="btn_pack" href="#" class=" btn btn-default" ><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Pack It </a> 
+                <button id="btn_save"  class=" btn btn-default" ><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
+                </div>
+
+            </div>
+            
+
+        </div>
+
+      <div class="row">
+          <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">MetaData(JSON)</div>
+                    <div class="panel-body">
+                        <div id="editor_meta" class="editor"></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                         Payload Editor
+                        <div class="pull-right col-md-3">
+                            <input type="text" class="form-control input-sm" id="inp_func_name" placeholder="Function Name">
+                        
+                        
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="editor_py" class="editor"></div>
+                    </div>
+                </div>
+              
+          </div>
+          <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Input Message(RDF)</div>
+                    <div class="panel-body">
+                        <div id="editor_in_xml" class="editor"></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Output Message(RDF)</div>
+                    <div class="panel-body">
+                        <div id="editor_out_xml" class="editor"></div>
+                    </div>
+                </div>
+          </div>
+
+      </div>
+
+      
+
+      <footer id="footer">
+          <hr>
+        <p>&copy; 2017 WanFang Hospital</p>
+      </footer>
+    </div>
+    <div id="templates">
+        <div tpl="msg">
+            <span class='user'></span> 
+            <span class='content'></span>
+        </div>
+      
+    </div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js
+"></script>
+      
+
+    <script src="nv-client2/base.js"></script>
+    <!--
+    <script src="nv-client2/locache.js"></script>
+    
+    <script src="nv-client2/transparency.min.js"></script>
+    
+    <script src="nv-client2/nv_client.js"></script>
+    
+    
+    <script src="nv-client2/ui_base.js"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js"></script>
+    <script src="js/editor_ui.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,95 @@
+/*@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+*/
+body,html,table{
+    font-family: "Helvetica Neue",Helvetica,"微軟正黑體",Arial,sans-serif;
+    
+}
+#topics_box.jqcloud span{
+    font-family: "Helvetica Neue",Helvetica,"微軟正黑體",Arial,sans-serif;
+    
+}
+.panel-body{
+    padding:0px;
+}
+.jumbotron h1{
+    color:#505050;
+    font-weight: bold;
+}
+.page_nav{
+    padding-top: 20px;
+}
+#sys_bar{
+    text-align: right;
+    padding-right: 15px;
+}
+.page-header{
+    margin-top:0px;
+}
+#templates {
+    display:none;
+}
+#input_topic {
+    border: 0px;
+    font-weight: normal;
+    border-bottom: 1px solid #000000;
+    background-color: #eee;
+    text-align: center;
+}
+#input_title{
+    /*width:330px;
+    display: inline-block;
+    */
+}
+#talk_sys_scroll{
+    overflow-y: scroll;
+    height: 300px;
+    max-height: 300px;
+    background-color: #565656;
+    color: floralwhite;
+}
+.join_talk_topic{
+    cursor: pointer;
+}
+#talk_status{
+    width: 100%;
+    
+    padding: 5px;
+    
+}
+.chat_box .title{
+    color:#337ab7;
+    font-size:larger;
+    
+}
+.chat_box .user {
+    color: aliceblue;
+}
+.chat_box .self_msg .user {
+    color:#ffab6f;
+}
+.chat_box .sys .user {
+    color: white;
+}
+.chat_box .msg {
+    color:#dadada;
+}
+.chat_box .msg_scroll{
+    overflow-y: scroll;
+    height: 300px;
+    max-height: 300px;
+    background-color: #565656;
+    color: floralwhite;
+}
+.chat_box .msg_box{
+    width: 100%;
+    padding: 5px;
+}
+
+.shout_post .panel-footer{
+    text-align: right;
+}
+#btn_nick{
+    text-decoration: underline;
+    cursor: pointer;
+    color:dodgerblue;
+}

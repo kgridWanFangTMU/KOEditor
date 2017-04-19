@@ -1,0 +1,8 @@
+{
+    "max_thread_num":1,
+    "cron_enable":false,
+    "multithread":false,
+    "port":8066,
+    "static_index":"editor.html",
+    "controllers":["proxy"]
+}
