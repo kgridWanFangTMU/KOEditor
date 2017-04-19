@@ -202,10 +202,15 @@
           }
         };
       })(this));
+      $server_url = null;
       $hash = window.location.hash;
       if ($hash) {
         $server_url = $hash.substr(1);
+      }
+      if ($server_url) {
         return this.connect($server_url);
+      } else {
+        return this.dlg_server();
       }
     },
     connect: function($url) {

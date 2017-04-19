@@ -134,11 +134,15 @@ root.kedit=kedit=
             if $id?
                 $ko=@kg.ko[$id]
                 @load $ko
-                
+        $server_url=null
         $hash=window.location.hash
         if $hash
             $server_url=$hash.substr(1)
+        if $server_url
             @connect $server_url
+        else
+            do @dlg_server
+            
     connect:($url)->
         delete @kg
         @kg=kgrid 
