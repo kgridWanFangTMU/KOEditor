@@ -173,7 +173,7 @@
           return _this.setSize();
         };
       })(this));
-      $('#btn_server').on('click', (function(_this) {
+      this.btn_server = $('#btn_server').on('click', (function(_this) {
         return function() {
           return _this.dlg_server();
         };
@@ -215,6 +215,7 @@
     },
     connect: function($url) {
       delete this.kg;
+      this.btn_server.attr('title', $url);
       this.kg = kgrid({
         server: $url,
         proxy: true

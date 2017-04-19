@@ -115,7 +115,7 @@ root.kedit=kedit=
         @ko_sel=$ '#ko_sel'
         $(window).on 'resize',=>
             do @setSize
-        $('#btn_server').on 'click',=>
+        @btn_server=$('#btn_server').on 'click',=>
             do @dlg_server
         $('#btn_pack').on 'click',=>
             $p=@pack()
@@ -145,6 +145,7 @@ root.kedit=kedit=
             
     connect:($url)->
         delete @kg
+        @btn_server.attr 'title',$url
         @kg=kgrid 
             server:$url
             proxy:true
