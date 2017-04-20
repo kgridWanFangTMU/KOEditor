@@ -1,4 +1,4 @@
-# KOeditor
+# KOEditor
 This is a editing tool to quickly load, build, and edit knowledge objects.  
 
 ## Quick Start
@@ -26,3 +26,5 @@ http://localhost:8066
 ```
 http://localhost:8066#http://activator.server.url/stack/ 
 ```
+## Demo
+http://lhs.wanfang.gov.tw:8066  (Read-only)
