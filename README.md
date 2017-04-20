@@ -15,7 +15,7 @@ $ node index.js
 
   Configuration  :
 ```
-\cfg\sv.koeditor.json
+/cfg/sv.koeditor.json
 ```
 
   Open in browser  :
